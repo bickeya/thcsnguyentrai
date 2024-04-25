@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<htlml>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường THCS Nguyễn Trãi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img class="logo" src="eduford_img/mylogo.png"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index2.html">TRANG CHỦ</a></li>
+            <li><a href="about2.html">GIỚI THIỆU</a></li>
+            <li><a href="News2.html">TIN TỨC</a></li>
+            <li><a href="Organizing2.html">CƠ CẤU TỔ CHỨC</a>
+              <div class="sub-menu-1">
+                <ul>
+                  <li><a href="">Ban Giám Hiệu</a></li>
+                  <li><a href="">Tổ Chuyên Môn</a></i></li>
+                  <li><a href="">Tổ Văn Phòng</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="contact2.html">LIÊN HỆ</a></li>
+            <li><a href="account.html"><img id="avatar_img" src=""></a>
+                <div class="sub-menu-1">
+                  <ul>
+                    <li><a href="account.html">Tài khoản</a></li>
+                    <li><a href="index.html">Đăng xuất</a></li>
+                  </ul>
+                </div>
+              </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Tài Khoản của Bạn</h1>
+    </section>
+    <div class="container light-style flex-grow-1 container-p-y">
+      <h4 class="font-weight-bold py-3 mb-4">
+          Cài đặt tài khoản
+      </h4>
+      <form method="post" onsubmit=update()>
+      <div class="card overflow-hidden">
+          <div class="row no-gutters row-bordered row-border-light">
+              <div class="col-md-3 pt-0">
+                  <div class="list-group list-group-flush account-settings-links">
+                      <a class="list-group-item list-group-item-action active" data-toggle="list"
+                          href="#account-general">Thông tin cơ bản</a>
+                      <a class="list-group-item list-group-item-action" data-toggle="list"
+                          href="#account-change-password">Đổi mật khẩu</a>
+                      <a class="list-group-item list-group-item-action" data-toggle="list"
+                          href="#account-info">Thông tin</a>
+                  </div>
+              </div>
+              <div class="col-md-9">
+                  <div class="tab-content">
+                      <div class="tab-pane fade active show" id="account-general">
+                          <div class="card-body media align-items-center">
+                              <img  id="avatar" src="" alt
+                                  class="d-block ui-w-80">
+                              <div class="media-body ml-4">
+                                  <label class="btn btn-outline-primary">
+                                       Đổi ảnh đại diện
+                                      <input id="newavatar" type="file" class="account-settings-fileinput imgUploader"accept=".jpg, .jpeg, .png">
+                                  </label> &nbsp;
+                                  <button type="button" class="btn btn-default md-btn-flat">Reset</button>
+                                  <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                              </div>
+                          </div>
+                          <hr class="border-light m-0">
+                          <div class="card-body">
+                              <div class="form-group">
+                                  <label class="form-label">Username</label>
+                                  <input id="username1" type="text" class="form-control mb-1" value="">
+                              </div>
+                              <div class="form-group">
+                                  <label class="form-label">Họ và tên</label>
+                                  <input id="name1" type="text" class="form-control" value="">
+                              </div>
+                              <div class="form-group">
+                                  <label class="form-label">E-mail</label>
+                                  <input id="mail1" type="text" class="form-control mb-1" value="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="account-change-password">
+                          <div class="card-body pb-2">
+                              <div class="form-group">
+                                  <label class="form-label">Mật khẩu hiện tại</label>
+                                  <input id="currentpass1" type="password" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                  <label class="form-label">Mật khẩu mới</label>
+                                  <input id="pass" type="password" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                  <label class="form-label">Lặp lại mật khẩu mới</label>
+                                  <input type="password" class="form-control">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="account-info">
+                          <div class="card-body pb-2">
+                              <div class="form-group">
+                                  <label class="form-label">Bio</label>
+                                  <textarea id="bio1" class="form-control"
+                                      rows="5" value=""></textarea>
+                              </div>
+                              <div class="form-group">
+                                  <label class="form-label">Ngày/tháng/năm sinh</label>
+                                  <input id="birthdate1" type="date" class="form-control" value="">
+                              </div>
+                          </div>
+                          <hr class="border-light m-0">
+                          <div class="card-body pb-2">
+                              <h6 class="mb-4">Thông tin liên hệ</h6>
+                              <div class="form-group">
+                                  <label class="form-label">Số điện thoại</label>
+                                  <input  id="phone1" type="text" class="form-control" value="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="text-right mt-3">
+          <button type="submit" class="btn btn-primary" >Cập Nhật</button>
+          <a href="account.html"><button class="btn btn-default">Cancel</button></a>
+      </div>
+    </form>
+  </div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+
+  </script>
+    <!--Footer-->
+    <section class="footer">
+      <h4>Giới Thiệu</h4>
+      <p>
+    Trường THCS Nguyễn Trãi tọa lạc tại thành phố Phan Thiết, tỉnh Bình Thuận, nằm trong cộng<br> đồng văn hóa sôi động và phát triển. Với một đội ngũ giáo viên tận tâm và có kinh nghiệm,<br> trường THCS Nguyễn Trãi cam kết cung cấp một môi trường học tập tích cực và đầy đủ các cơ<br> hội phát triển cho học sinh. Trường đặc biệt chú trọng vào việc phát triển năng lực toàn diện<br> cho học sinh, kết hợp giáo dục truyền thống với những phương pháp giáo dục hiện đại, từ đó<br> tạo ra những thế hệ trẻ tự tin, có kiến thức và kỹ năng cần thiết để thành công trong tương lai.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by Van Cong Thuyen </p>
+    </section>
+    <!---------Javascript for toggling menu-------->
+    <script src="js_file.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var user_data = JSON.parse(localStorage.getItem("user"));
+        document.getElementById("username1").value = user_data.username;
+        document.getElementById("name1").value = user_data.name;
+        document.getElementById("mail1").value = user_data.email;
+        document.getElementById("currentpass1").value = user_data.password;
+        document.getElementById("bio1").value = user_data.bio;
+        document.getElementById("birthdate1").value = user_data.birthdate;
+        document.getElementById("phone1").value =  user_data.phone;
+        const newImage = document.getElementById('avatar_img',);
+        newImage.src = localStorage.getItem('image');
+        const newImage1 = document.getElementById('avatar',);
+        newImage1.src = localStorage.getItem('image');
+        const imageInput = document.getElementById('newavatar');
+            imageInput.addEventListener('change', event => {
+            const image = event.target.files[0];
+            const reader = new FileReader();
+            reader.addEventListener('load', () => {
+                localStorage.setItem('image', reader.result);
+                console.log(reader.result)
+            });
+            if (image) {
+                reader.readAsDataURL(images);
+            }
+            });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</htlml>

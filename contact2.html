@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<htlml>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường THCS Nguyễn Trãi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="sub-header">
+      <nav>
+        <a href="index.html"><img class="logo" src="eduford_img/mylogo.png"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index2.html">TRANG CHỦ</a></li>
+            <li><a href="about2.html">GIỚI THIỆU</a></li>
+            <li><a href="News2.html">TIN TỨC</a></li>
+            <li><a href="Organizing2.html">CƠ CẤU TỔ CHỨC</a>
+              <div class="sub-menu-1">
+                <ul>
+                  <li><a href="">Ban Giám Hiệu</a></li>
+                  <li><a href="">Tổ Chuyên Môn</a></i></li>
+                  <li><a href="">Tổ Văn Phòng</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="contact2.html">LIÊN HỆ</a></li>
+            <li><a href="account.html"><img id="avatar_img4" src=""></a>
+              <div class="sub-menu-1">
+                <ul>
+                  <li><a href="">Tài khoản</a></li>
+                  <li><a href="index.html">Đăng xuất</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Liên Hệ Chúng Tôi</h1>
+    </section>
+    <!---contact us content-->
+    <section class="location">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.4277123197644!2d108.1098356740896!3d10.93102845632498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3176830e8867f409%3A0x57f1b4e6610dffe2!2zVHLGsOG7nW5nIFRIQ1MgTmd1eeG7hW4gVHLDo2k!5e0!3m2!1sen!2s!4v1704882581161!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="contact-us">
+      <div class="row">
+        <div class="contact-col">
+          <div>
+            <i class="fa fa-home"></i>
+            <span>
+              <h5>222 Thủ Khoa Huân, Phú Thuỷ</h5>
+              <p>Thành phố Phan Thiết, Bình Thuận, Vietnam</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <span>
+              <h5>02523828265</h5>
+              <p>Thứ Hai đến Thứ Bảy, 7AM-6PM</p>
+            </span>
+          </div>
+          <div>
+            <i class="fa fa-envelope-o"></i>
+            <span>
+              <h5>nickcongthuyen@gmail.com</h5>
+              <p>Gửi email cho chúng tôi câu hỏi của bạn</p>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+            <form action="">
+              <input type="text" placeholder="Nhập Họ và Tên" required>
+              <input type="text" placeholder="Nhập lớp học" required>
+              <textarea rows="8" placeholder="Tin nhắn"></textarea>
+              <button type="submit" class="hero-btn red-btn">Gửi Tin Nhắn</button>
+            </form>
+        </div>
+      </div>
+    </section>
+    <!--Footer-->
+    <section class="footer">
+      <h4>Giới Thiệu</h4>
+      <p>
+    Trường THCS Nguyễn Trãi tọa lạc tại thành phố Phan Thiết, tỉnh Bình Thuận, nằm trong cộng<br> đồng văn hóa sôi động và phát triển. Với một đội ngũ giáo viên tận tâm và có kinh nghiệm,<br> trường THCS Nguyễn Trãi cam kết cung cấp một môi trường học tập tích cực và đầy đủ các cơ<br> hội phát triển cho học sinh. Trường đặc biệt chú trọng vào việc phát triển năng lực toàn diện<br> cho học sinh, kết hợp giáo dục truyền thống với những phương pháp giáo dục hiện đại, từ đó<br> tạo ra những thế hệ trẻ tự tin, có kiến thức và kỹ năng cần thiết để thành công trong tương lai.
+      </p>
+      <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <p>Made with <i class="fa fa-heart-o"></i> by Van Cong Thuyen </p>
+    </section>
+    <!---------Javascript for toggling menu-------->
+    <script src="js_file.js"></script>
+    <script>
+      const newImage3 = document.getElementById('avatar_img4',);
+      newImage3.src = localStorage.getItem('image');
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</htlml>
